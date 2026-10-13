@@ -5,7 +5,8 @@ function hideResultsAndError() {
   document.getElementById("rightLeaning").setAttribute("class", "hidden");
 };
 
-onload = function() {
+window.onload = function() {
+  console.log("onload");
   const form = document.querySelector("#my-form");
   console.log(form);
   form.onsubmit = function(event) {
@@ -15,17 +16,17 @@ onload = function() {
     const womenRights = document.querySelector('input[name="women-rights"]:checked').value;
     const immigrants = document.querySelector('input[name="immigrants"]:checked').value;
     const queerRights = document.querySelector('input[name="queers"]:checked').value;
-    console.log(women-rights);
-    if (womenRights && immigrants && queerRights) {
-      if () {
-        document.getElementById("left-leaning").removeAttribute("class");
-      } else if () {
-        document.getElementById("right-leaning").removeAttribute("class");
-      } else {
-        document.getElementById("center").removeAttribute("class");
-      }
-    } else {
-      document.getElementById("error-message").removeAttribute("class");
-    }
+    console.log(womenRights);
+    // if (womenRights && immigrants && queerRights) {
+    //   if () {
+    //     document.getElementById("left-leaning").removeAttribute("class");
+    //   } else if () {
+    //     document.getElementById("right-leaning").removeAttribute("class");
+    //   } else {
+    //     document.getElementById("center").removeAttribute("class");
+    //   }
+    // } else {
+    //   document.getElementById("error-message").removeAttribute("class");
+    // }
   };
 };
