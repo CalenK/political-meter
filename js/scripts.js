@@ -3,19 +3,27 @@ function hideResultsAndError() {
   document.getElementById("leftLeaning").setAttribute("class", "hidden");
   document.getElementById("center").setAttribute("class", "hidden");
   document.getElementById("rightLeaning").setAttribute("class", "hidden");
-}
+};
 
 onload = function() {
-  const form = document.querySelector("form");
+  const form = document.querySelector("#my-form");
+  console.log(form);
   form.onsubmit = function(event) {
     event.preventDefault();
+    console.log("has prevented default");
     hideResultsAndError();
-    const womenRights = document.querySelector('input[name="womenRights"]:checked').value
+    const womenRights = document.querySelector('input[name="women-rights"]:checked').value;
     const immigrants = document.querySelector('input[name="immigrants"]:checked').value;
     const queerRights = document.querySelector('input[name="queers"]:checked').value;
-    console.log(womenRights)
+    console.log(women-rights);
     if (womenRights && immigrants && queerRights) {
-      if ()
+      if () {
+        document.getElementById("left-leaning").removeAttribute("class");
+      } else if () {
+        document.getElementById("right-leaning").removeAttribute("class");
+      } else {
+        document.getElementById("center").removeAttribute("class");
+      }
     } else {
       document.getElementById("error-message").removeAttribute("class");
     }
